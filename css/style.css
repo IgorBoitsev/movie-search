@@ -1,0 +1,156 @@
+.container {
+  margin-bottom: 15px;
+}
+
+/* ------ JUMBOTRON ------ */
+.jumbotron {
+  padding: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+/* ------ MOVIE CARD ------ */
+.movie-card,
+.person-card {
+  position: relative;
+  margin: 5px 0px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+.movie-card {
+  cursor: pointer;
+}
+.movie-card:hover,
+.person-card:hover {
+  box-shadow: 0px 0px 9px black;
+  border-radius: 0.25rem;
+  background-color: #e9ecef;
+}
+.movie-card:hover .popup-label {
+  opacity: 1;
+}
+.movie-trend-card-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.movie-trend-card {
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: .25rem;
+  transition: background-color 0.3s ease;
+}
+.movie-trend-card:hover .overlay {
+  opacity: 0.8;
+}
+.movie-trend-card:hover .movie-trend-info {
+  bottom: 30px;
+}
+.movie-trends {
+  width: 100%;
+}
+.movie-trend-card .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.movie-trend-info {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  transition: bottom 0.3s ease;
+}
+.movie-trend-info span {
+  display: block;
+}
+.movie-poster {
+  width: 100%;
+}
+.movie-title {
+  margin-top: 15px;
+}
+/* .movie-card:hover .movie-title {
+  color: darkorange;
+} */
+
+/* ------MOVIE IN DETAIL ------ */
+.movie-in-detail {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: grey;
+  /* opacity: 0.8; */
+}
+.movie-in-detail .container {
+  margin-top: 60px;
+}
+.movie-in-detail-poster {
+  width: 100%;
+}
+.description {
+  margin-top: 15px;
+}
+.btn-close {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+}
+
+/* ------ POPUP LABEL ------ */
+.popup-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  width: 60%;
+  height: 50px;
+  background-color: orange;
+  bottom: 40%;
+  left: 20%;
+  border-radius: .25rem;
+  text-transform: capitalize;
+  transition: opacity 0.3s ease;
+}
+.year-and-genre {
+  color: white;
+  /* text-transform: uppercase; */
+}
+.spinner {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border: 10px dotted;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-top-color: #aaa;
+  border-right-color: #555;
+  border-bottom-color: #000;
+  animation: spin 500ms infinite linear;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------ MEDIA ------ */
+@media (min-width: 1400px) {
+  .movie-in-detail-poster {
+    width: 90%;
+  }
+}

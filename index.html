@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МувиСёрч на JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="row">
+        <a href="index.html" class="navbar-brand">МувиСёрч</a>
+      </div>
+    </div>
+  </nav>
+  <!-- /.navbar -->
+
+  <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <h3 class="text-center">Поиск фильмов и сериалов</h3>
+      <!-- /.text-center -->
+      <form action="" id="search-form" class="row">
+        <div class="col-12">
+          <input type="text" class="form-control" id="search-text" placeholder="Введите название фильма или сериала">
+        </div>
+        <div class="row g-2 justify-content-around">
+          <!-- <div class="col-12"> -->
+            <button type="submit" class="btn btn-primary col-4">Найти</button>
+            <button type="reset" id="reset" class="btn btn-secondary col-4">Очистить</button>
+          <!-- </div> -->
+        </div>
+      </form>
+      <!-- /#search-form -->
+    </div>
+    <!-- /.jumbotron -->
+  </div>
+  <!-- /.container -->
+
+  <div class="container">
+    <div id="movies" class="row">
+      
+    </div>
+    <!-- /#movies -->
+  </div>
+  <!-- /.container -->
+
+  <div class="movie-in-detail" >
+
+  </div>
+  <!-- /.movie-in-detail -->
+
+</body>
+</html>
